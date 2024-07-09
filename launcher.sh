@@ -1,3 +1,5 @@
+#!/bin/sh
+
 # Define the config file
 CONFIG_FILE="config"
 
@@ -5,7 +7,6 @@ CONFIG_FILE="config"
 # Function to read parameters from the config file
 get_config_value() {
     grep "$1" "$CONFIG_FILE" | awk -F': ' '{print $2}'
-
 }
 
 # Read gnu radio parameters
